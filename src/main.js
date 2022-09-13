@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import VueOverflowScroll from 'vue-overflow-scroll'
+import router from './router'
 
-// Vue.use(VueOverflowScroll)
-
-createApp(App).use(VueOverflowScroll).mount('#app')
+createApp(App).use(VueOverflowScroll).use(router).mount('#app')

@@ -1,20 +1,17 @@
 <template>
   <NavBar/>
-  <UpButtonPage/>
-  <SliderSale/>
-  <SliderProduct/>
+  <router-view>
+
+  </router-view>
   <Footer/>
 </template>
 <script>
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import UpButtonPage from "@/components/UpButtonPage";
-import SliderSale from "@/components/SliderSale";
-import SliderProduct from "@/components/SliderProduct";
 
 export default {
   name: 'App',
-  components: {SliderProduct, SliderSale, UpButtonPage, Footer, NavBar},
+  components: {Footer, NavBar},
   data() {
     return {
 
