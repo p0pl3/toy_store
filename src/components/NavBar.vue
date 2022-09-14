@@ -309,7 +309,7 @@ a {
   display: none;
 }
 
-@media (min-width: 564px) {
+@media (min-width: 600px) {
   .navbar__menuitem {
     display: inline-block;
     //background-color: #2196F3;
@@ -324,7 +324,7 @@ a {
   }
 }
 
-@media (max-width: 564px) {
+@media (max-width: 600px) {
   .navbar__logo {
     font-size: 25px;
   }

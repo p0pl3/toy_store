@@ -100,7 +100,7 @@ $base-grey: rgba(75, 75, 75, 0.9);
   }
 }
 
-@media (max-width: 564px) {
+@media (max-width: 600px) {
   .product {
     margin: 5px;
     padding: 10px;
