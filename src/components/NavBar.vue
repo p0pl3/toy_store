@@ -163,6 +163,7 @@ a {
 }
 
 .navbar__categories {
+  margin-top: 10px;
   position: relative;
   z-index: 2;
   overflow: hidden;
@@ -250,10 +251,11 @@ a {
 
 .navbar__logo,
 .navbar__menuitem {
-  padding: 20px 20px 20px 0px;
+  padding: 15px 15px 15px 0px;
   border-left: 5px solid transparent;
   color: #FFF;
   text-decoration: none;
+  font-size: 17px;
 }
 
 .navbar__logo {
@@ -307,7 +309,6 @@ a {
 }
 
 @media (min-width: 564px) {
-  .navbar__logo,
   .navbar__menuitem {
     display: inline-block;
     //background-color: #2196F3;
@@ -323,12 +324,25 @@ a {
 }
 
 @media (max-width: 564px) {
-  .navbar__search {
-    width: 75%;
+  .navbar__logo {
+    font-size: 25px;
   }
-
+  .navbar__search {
+    height: 40px;
+    width: 75%;
+    font-size: 18px;
+    font-weight: 100;
+  }
   .slider {
-    margin-top: 140px;
+    margin-top: 125px;
+  }
+  .navbar__profile {
+    width: 25px;
+    height: 25px;
+  }
+  .navbar__cart {
+    width: 25px;
+    height: 25px;
   }
 }
 
