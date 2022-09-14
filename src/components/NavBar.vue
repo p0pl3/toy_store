@@ -304,6 +304,7 @@ a {
   }
 }
 
+
 .navbar-hidden {
   display: none;
 }
@@ -343,6 +344,15 @@ a {
   .navbar__cart {
     width: 25px;
     height: 25px;
+  }
+  .slider__item {
+    width: 80px;
+    margin-left: 0;
+    padding: 0;
+
+    h4 {
+      font-size: 13px;
+    }
   }
 }
 
