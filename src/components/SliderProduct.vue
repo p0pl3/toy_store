@@ -75,11 +75,7 @@ $base-grey: rgba(75, 75, 75, 0.9);
     margin: 0;
   }
 }
-@media (max-width: 600px) {
-  .product__slider__horizontal {
-    margin-top: 0;
-  }
-}
+
 @media only screen and (max-width: 600px) {
   .slider__categories-control {
     display: none;

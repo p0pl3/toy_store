@@ -9,11 +9,11 @@
       </div>
       <div class="product__price">
         <h4>123$</h4>
-        <img class="image" src="@/assets/cart-black.svg">
+        <img class="cart__image" src="@/assets/cart-black.svg">
       </div>
     </div>
     <div class="product__wish">
-      <img class="image" src="@/assets/wish.svg">
+      <img class="wish__image" src="@/assets/wish.svg">
     </div>
     <div class="product__sale">
       <h5>-40%</h5>
@@ -38,7 +38,12 @@ $base-grey: rgba(75, 75, 75, 0.9);
   padding-top: 10px;
 }
 
-.image {
+.cart__image {
+  width: 25px;
+  height: 25px;
+}
+
+.wish__image {
   width: 25px;
   height: 25px;
 }
@@ -115,9 +120,13 @@ $base-grey: rgba(75, 75, 75, 0.9);
     padding-top: 10px;
     font-size: 17px;
   }
-  .image {
+  .cart__image {
     width: 20px;
     height: 20px;
+  }
+  .wish__image {
+    width: 25px;
+    height: 25px;
   }
   .product__sale {
     left: 5px;
