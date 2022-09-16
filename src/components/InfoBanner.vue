@@ -23,8 +23,8 @@ $base-grey: rgba(75, 75, 75, 0.9);
 
 .banner__list {
   display: grid;
-  column-gap: 2rem;
-  row-gap: 2rem;
+  column-gap: 30px;
+  row-gap: 30px;
   grid-template-columns: repeat(2, 1fr);
 }
 @media (max-width: 600px){

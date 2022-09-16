@@ -1,8 +1,8 @@
 <template>
   <UpButtonPage/>
   <SliderSale/>
-  <InfoBanner/>
   <SliderProduct/>
+  <InfoBanner/>
 </template>
 <script>
 import UpButtonPage from "@/components/UpButtonPage";
