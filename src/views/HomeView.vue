@@ -2,15 +2,17 @@
   <UpButtonPage/>
   <SliderSale/>
   <SliderProduct/>
+  <InfoBanner/>
 </template>
 <script>
 import UpButtonPage from "@/components/UpButtonPage";
 import SliderSale from "@/components/SliderSale";
 import SliderProduct from "@/components/SliderProduct";
+import InfoBanner from "@/components/InfoBanner";
 
 export default {
   name: 'HomeView',
-  components: {SliderProduct, SliderSale, UpButtonPage},
+  components: {SliderProduct, SliderSale, UpButtonPage, InfoBanner},
   data() {
     return {
 
