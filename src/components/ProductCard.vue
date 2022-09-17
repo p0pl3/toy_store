@@ -105,13 +105,6 @@ $base-grey: rgba(75, 75, 75, 0.9);
   }
 }
 
-@media (max-width: 1100px) {
-  .product {
-    max-width: 200px;
-    min-width: 200px;
-  }
-}
-
 @media (max-width: 600px) {
   .product {
     margin: 5px;

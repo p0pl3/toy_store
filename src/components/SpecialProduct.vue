@@ -110,6 +110,12 @@ $base-grey: rgba(75, 75, 75, 0.9);
   display: none;
 }
 
+@media (max-width: 1100px) {
+  .product {
+    max-width: 200px;
+    min-width: 200px;
+  }
+}
 @media (max-width: 600px) {
   .special__product-banner {
     display: none;
@@ -124,6 +130,11 @@ $base-grey: rgba(75, 75, 75, 0.9);
   .banner-hidden {
     display: block;
     margin-right: 5px;
+  }
+  .product {
+    margin: 5px;
+    padding: 10px;
+    min-width: 160px;
   }
 }
 </style>
