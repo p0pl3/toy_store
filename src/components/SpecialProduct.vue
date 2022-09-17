@@ -12,7 +12,7 @@
           </a>
         </div>
       </div>
-      <div class="special__product-wrapper">
+      <div class="special__product-wrapper" :style="{flexDirection: direction}">
         <div class="special__product-banner">
           <SpecialBannerItem/>
         </div>
@@ -36,6 +36,9 @@ import SpecialBannerItem from "@/components/SpecialBannerItem";
 
 export default {
   name: "SpecialProduct",
+  props: {
+    direction: String
+  },
   components: {ProductCard, SpecialBannerItem},
   methods: {
     nextProductHorizontalSlider: function () {
@@ -76,10 +79,11 @@ $base-grey: rgba(75, 75, 75, 0.9);
 
 .special__product-wrapper {
   display: flex;
+  //flex-direction: row-reverse;
 }
 
 .special__product-banner {
-  margin: 10px 10px 10px 0;
+  margin: 10px;
   max-width: 60%;
   min-width: 40%;
 }
@@ -89,6 +93,7 @@ $base-grey: rgba(75, 75, 75, 0.9);
   width: 100%;
   overflow-x: scroll;
   align-items: flex-start;
+  margin-right: 10px;
 
   &::-webkit-scrollbar {
     width: 0px;

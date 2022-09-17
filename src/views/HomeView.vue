@@ -4,6 +4,7 @@
   <SliderProduct/>
   <InfoBanner/>
   <SpecialProduct/>
+  <SpecialProduct direction="row-reverse"/>
 </template>
 <script>
 import UpButtonPage from "@/components/UpButtonPage";
