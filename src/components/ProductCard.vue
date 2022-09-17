@@ -1,5 +1,5 @@
 <template>
-  <div v-for="i in (1,2,3,4,5,6,7,8)" :key="i" class="product">
+  <div class="product">
     <div class="product__image">
       <img src="@/assets/product_1.jpeg" style=" border-radius: 15px; width: 100%;">
     </div>
@@ -102,6 +102,13 @@ $base-grey: rgba(75, 75, 75, 0.9);
     font-size: 20px;
     color: $base-grey;
     font-weight: 500;
+  }
+}
+
+@media (max-width: 1100px) {
+  .product {
+    max-width: 200px;
+    min-width: 200px;
   }
 }
 
