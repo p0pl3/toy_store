@@ -18,21 +18,16 @@ $base-grey: rgba(75, 75, 75, 0.9);
 .banner__image {
   border-radius: 15px;
   height: 920px;
-  width: 100%;
-
   object-fit: cover;
 }
-.special__banner__item{
-  min-width:185px;
+
+.special__banner__item {
+  min-width: 185px;
 }
+
 @media (max-width: 1100px) {
   .banner__image {
     height: 705px;
-  }
-}
-@media (max-width: 600px){
-  .banner__image {
-    height: 100%;
   }
 }
 </style>

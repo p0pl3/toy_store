@@ -79,7 +79,6 @@ $base-grey: rgba(75, 75, 75, 0.9);
 
 .special__product-wrapper {
   display: flex;
-  //flex-direction: row-reverse;
 }
 
 .special__product-banner {
@@ -90,13 +89,12 @@ $base-grey: rgba(75, 75, 75, 0.9);
 
 .special__product__list {
   display: flex;
-  width: 100%;
   overflow-x: scroll;
   align-items: flex-start;
   margin-right: 10px;
 
   &::-webkit-scrollbar {
-    width: 0px;
+    width: 0;
   }
 }
 
