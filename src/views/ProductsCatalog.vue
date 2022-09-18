@@ -6,8 +6,6 @@
         <ul class="breadcrumb">
           <li><a href="#">Home</a></li>
           <li><a href="#">Pictures</a></li>
-          <li><a href="#">Summer 15</a></li>
-          <li>Italy</li>
         </ul>
       </div>
     </div>
@@ -17,7 +15,7 @@
       <div class="products-catalog__title">
         <h2>Clothes</h2>
         <select id="cars" name="cars" class="box">
-          <option value="volvo">Volvo</option>
+          <option value="volvo">Price</option>
           <option value="saab">Saab</option>
           <option value="fiat">Fiat</option>
           <option value="audi">Audi</option>
@@ -25,10 +23,65 @@
       </div>
       <div class="products__article">
         <div class="products-catalog__filter">
+          <h4 style="margin-top: 0px;">Category</h4>
+          <ul>
+            <li><a href="#">Category 1</a></li>
+            <li><a href="#">Category 2</a></li>
+            <li><a href="#">Category 3</a></li>
+            <li><a href="#">Category 4</a></li>
+            <li><a href="#">Category 5</a></li>
+          </ul>
+          <div class="filter__price-range">
+            <h4>Price</h4>
+            <div class="" style="display: flex;">
+              <div class="" style="width: 50%;">
+                <p style="margin: 0px;">From</p>
+                <input
+                    style="width: 100%; font-size: 20px;  text-indent:5px;border-right: 1px solid grey; height: 35px; border-radius: 15px 0px 0px 15px;"
+                    type="number">
+              </div>
+              <div class="" style="width: 50%;">
+                <p style="margin: 0px;">To</p>
+                <input
+                    style="width: 100%; font-size: 20px; text-indent:5px;border-left: 1px solid grey; height: 35px;  border-radius: 0px 15px 15px 0px;"
+                    type="number">
+              </div>
 
+            </div>
+          </div>
+          <div class="filter__delivery">
+            <h4>Срок доставки</h4>
+            <!--            <label for="two"> 2 дня</label>-->
+            <ul>
+              <li><input type="radio" id="deliveryChoice1"
+                         name="delivery" value="email">
+                <label for="deliveryChoice1">1 день</label></li>
+              <li><input type="radio" id="deliveryChoice2"
+                         name="delivery" value="phone">
+                <label for="deliveryChoice2">2 дня</label></li>
+              <li><input type="radio" id="deliveryChoice3"
+                         name="delivery" value="mail">
+                <label for="deliveryChoice3">до 3 дней</label></li>
+            </ul>
+          </div>
+          <div class="filter__sale">
+            <h4>Sale</h4>
+            <!--            <label for="two"> 2 дня</label>-->
+            <ul>
+              <li><input type="radio" id="saleChoice1"
+                         name="contact" value="email">
+                <label for="saleChoice1">от 10% и выше</label></li>
+              <li><input type="radio" id="saleChoice2"
+                         name="contact" value="phone">
+                <label for="saleChoice2">от 30% и выше</label></li>
+              <li><input type="radio" id="saleChoice3"
+                         name="contact" value="mail">
+                <label for="saleChoice3">от 50% и выше</label></li>
+            </ul>
+          </div>
         </div>
         <div class="product-catalog__grip">
-          <ProductCard  v-for="i in (1, 2, 3,4, 5, 6)" :key="i" class="qwe"/>
+          <ProductCard v-for="i in (1, 2, 3,4, 5, 6,7,8,9,10,11,12)" :key="i" class="qwe"/>
         </div>
       </div>
     </div>
@@ -47,9 +100,14 @@ export default {
 
 <style lang="scss" scoped>
 
-//.product {
-//  width: calc(32% - 5 * 2px);
-//}
+h4 {
+  margin: 25px 0px 10px 0px;
+}
+
+.filter__price-range {
+  margin: 10px 0px;
+  //background: red;
+}
 
 .box {
   width: 120px;
@@ -62,8 +120,11 @@ export default {
 }
 
 .products-catalog__filter {
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 15px;
   position: sticky;
-  top: 0;
+  top: 10px;
 }
 
 .qwe {
@@ -77,12 +138,17 @@ export default {
   display: flex;
   justify-content: space-between;
   //flex-wrap: wrap;
+  align-items: start;
 }
 
 .products-catalog__filter {
   min-width: 280px;
-  height: 300px;
-  background: red;
+  background: #ffffff;
+
+  ul > li > a {
+    text-decoration: none;
+    color: #999999;
+  }
 }
 
 .product-catalog__grip {
@@ -100,9 +166,16 @@ export default {
 
 ul {
   margin: 0px;
+  list-style-type: none;
+  padding: 0px;
 }
+
+ul > li > label {
+  margin: 10px;
+}
+
 ul.breadcrumb {
-  padding: 10px 16px;
+  padding: 0px 16px;
   list-style: none;
   background-color: #eee;
 }
@@ -114,7 +187,7 @@ ul.breadcrumb li {
 }
 
 /* Add a slash symbol (/) before/behind each list item */
-ul.breadcrumb li+li:before {
+ul.breadcrumb li + li:before {
   padding: 8px;
   color: black;
   content: "/\00a0";
@@ -122,7 +195,7 @@ ul.breadcrumb li+li:before {
 
 /* Add a color to all links inside the list */
 ul.breadcrumb li a {
-  color: #0275d8;
+  color: #6c7073;
   text-decoration: none;
 }
 
@@ -151,6 +224,14 @@ ul.breadcrumb li a:hover {
 }
 
 @media screen and (max-width: 600px) {
+  .product-catalog__grip {
+    margin-left: 0px;
+  }
+  .products-catalog__filter {
+    position: inherit;
+    margin-bottom: 10px;
+  }
+
   .products__article {
     flex-wrap: wrap;
   }
