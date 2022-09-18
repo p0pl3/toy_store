@@ -14,74 +14,75 @@
     <div class="container">
       <div class="products-catalog__title">
         <h2>Clothes</h2>
-        <select id="cars" name="cars" class="box">
-          <option value="volvo">Price</option>
-          <option value="saab">Saab</option>
-          <option value="fiat">Fiat</option>
-          <option value="audi">Audi</option>
+        <select name="sort_by_field" class="sort_product_select">
+          <option value="price">Price</option>
+          <option value="rating">Rating</option>
+          <option value="count">Count</option>
+          <option value="popular">Popular</option>
         </select>
       </div>
       <div class="products__article">
         <div class="products-catalog__filter">
-          <h4 style="margin-top: 0px;">Category</h4>
-          <ul>
-            <li><a href="#">Category 1</a></li>
-            <li><a href="#">Category 2</a></li>
-            <li><a href="#">Category 3</a></li>
-            <li><a href="#">Category 4</a></li>
-            <li><a href="#">Category 5</a></li>
-          </ul>
-          <div class="filter__price-range">
-            <h4>Price</h4>
-            <div class="" style="display: flex;">
-              <div class="" style="width: 50%;">
-                <p style="margin: 0px;">From</p>
-                <input
-                    style="width: 100%; font-size: 20px;  text-indent:5px;border-right: 1px solid grey; height: 35px; border-radius: 15px 0px 0px 15px;"
-                    type="number">
-              </div>
-              <div class="" style="width: 50%;">
-                <p style="margin: 0px;">To</p>
-                <input
-                    style="width: 100%; font-size: 20px; text-indent:5px;border-left: 1px solid grey; height: 35px;  border-radius: 0px 15px 15px 0px;"
-                    type="number">
-              </div>
-
-            </div>
-          </div>
-          <div class="filter__delivery">
-            <h4>Срок доставки</h4>
-            <!--            <label for="two"> 2 дня</label>-->
+          <div class="filter__category">
+            <h4 style="margin-top: 0px;">Category</h4>
             <ul>
-              <li><input type="radio" id="deliveryChoice1"
-                         name="delivery" value="email">
-                <label for="deliveryChoice1">1 день</label></li>
-              <li><input type="radio" id="deliveryChoice2"
-                         name="delivery" value="phone">
-                <label for="deliveryChoice2">2 дня</label></li>
-              <li><input type="radio" id="deliveryChoice3"
-                         name="delivery" value="mail">
-                <label for="deliveryChoice3">до 3 дней</label></li>
+              <li><a href="#">Clothes</a></li>
+              <li><a href="#">Glass</a></li>
+              <li><a href="#">Toy</a></li>
+              <li><a href="#">Food</a></li>
+              <li><a href="#">Game</a></li>
             </ul>
           </div>
-          <div class="filter__sale">
-            <h4>Sale</h4>
-            <!--            <label for="two"> 2 дня</label>-->
+          <div class="filter__price-range" style="border-top: 1px solid grey;">
+            <h4>Price</h4>
+            <div class="price-range">
+              <div class="filter__price-from">
+                <p class="filter__price-label">From</p>
+                <input class="filter__price-left" type="number">
+              </div>
+              <div class="filter__price-from">
+                <p class="filter__price-label">To</p>
+                <input class="filter__price-right" type="number">
+              </div>
+            </div>
+          </div>
+          <div class="filter__delivery" style="border-top: 1px solid grey;">
+            <h4>Delivery period</h4>
             <ul>
-              <li><input type="radio" id="saleChoice1"
-                         name="contact" value="email">
-                <label for="saleChoice1">от 10% и выше</label></li>
-              <li><input type="radio" id="saleChoice2"
-                         name="contact" value="phone">
-                <label for="saleChoice2">от 30% и выше</label></li>
-              <li><input type="radio" id="saleChoice3"
-                         name="contact" value="mail">
-                <label for="saleChoice3">от 50% и выше</label></li>
+              <li>
+                <input type="radio" id="deliveryChoice1" name="delivery" value="email">
+                <label for="deliveryChoice1">1 day</label>
+              </li>
+              <li>
+                <input type="radio" id="deliveryChoice2" name="delivery" value="phone">
+                <label for="deliveryChoice2">2 day</label>
+              </li>
+              <li>
+                <input type="radio" id="deliveryChoice3" name="delivery" value="mail">
+                <label for="deliveryChoice3">up to 3 days</label>
+              </li>
+            </ul>
+          </div>
+          <div class="filter__sale" style="border-top: 1px solid grey;">
+            <h4>Sale</h4>
+            <ul>
+              <li>
+                <input type="radio" id="saleChoice1" name="contact" value="email">
+                <label for="saleChoice1">from 10% and up</label>
+              </li>
+              <li>
+                <input type="radio" id="saleChoice2" name="contact" value="phone">
+                <label for="saleChoice2">from 30% and up</label>
+              </li>
+              <li>
+                <input type="radio" id="saleChoice3" name="contact" value="mail">
+                <label for="saleChoice3">from 50% and up</label>
+              </li>
             </ul>
           </div>
         </div>
         <div class="product-catalog__grip">
-          <ProductCard v-for="i in (1, 2, 3,4, 5, 6,7,8,9,10,11,12)" :key="i" class="qwe"/>
+          <ProductCard v-for="i in (1, 2, 3,4, 5, 6,7,8,9,10,11,12)" :key="i" class="product__grid"/>
         </div>
       </div>
     </div>
@@ -100,20 +101,50 @@ export default {
 
 <style lang="scss" scoped>
 
+.filter__price-left,
+.filter__price-right {
+  width: 100%;
+  font-size: 20px;
+  text-indent: 5px;
+  border-right: 1px solid grey;
+  height: 35px;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.filter__price-right {
+  border-radius: 0px 15px 15px 0px;
+}
+
+.filter__price-label {
+  margin: 0px 0px 2px 0px;
+  font-size: 15px;
+  font-weight: 200;
+
+}
+
+.filter__price-from {
+  width: 50%;
+}
+
+.price-range {
+  display: flex;
+}
+
 h4 {
+  font-size: 22px;
   margin: 25px 0px 10px 0px;
 }
 
 .filter__price-range {
   margin: 10px 0px;
-  //background: red;
 }
 
-.box {
+.sort_product_select {
   width: 120px;
   height: 30px;
   border: 1px solid #999;
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: 500;
   color: #1c87c9;
   background-color: #eee;
   border-radius: 5px;
@@ -121,13 +152,13 @@ h4 {
 
 .products-catalog__filter {
   margin-top: 8px;
-  padding: 10px;
+  padding: 15px;
   border-radius: 15px;
   position: sticky;
   top: 10px;
 }
 
-.qwe {
+.product__grid {
   width: 32% !important;
   max-width: none;
   min-width: 200px;
@@ -137,7 +168,6 @@ h4 {
 .products__article {
   display: flex;
   justify-content: space-between;
-  //flex-wrap: wrap;
   align-items: start;
 }
 
@@ -171,7 +201,19 @@ ul {
 }
 
 ul > li > label {
-  margin: 10px;
+  margin: 5px;
+}
+
+ul > li {
+  font-size: 18px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+
+input[type=radio] {
+  width: 20px;
+  height: 20px;
 }
 
 ul.breadcrumb {
@@ -180,33 +222,29 @@ ul.breadcrumb {
   background-color: #eee;
 }
 
-/* Display list items side by side */
 ul.breadcrumb li {
   display: inline;
   font-size: 18px;
 }
 
-/* Add a slash symbol (/) before/behind each list item */
 ul.breadcrumb li + li:before {
   padding: 8px;
   color: black;
   content: "/\00a0";
 }
 
-/* Add a color to all links inside the list */
 ul.breadcrumb li a {
   color: #6c7073;
   text-decoration: none;
 }
 
-/* Add a color on mouse-over */
 ul.breadcrumb li a:hover {
   color: #01447e;
   text-decoration: underline;
 }
 
 @media screen and (max-width: 1000px) {
-  .qwe {
+  .product__grid {
     width: 49% !important;
     max-width: none;
     min-width: 200px;
@@ -214,7 +252,7 @@ ul.breadcrumb li a:hover {
 }
 
 @media screen and (max-width: 820px) {
-  .qwe {
+  .product__grid {
     width: 90% !important;
     max-width: 400px;
     min-width: 200px;
@@ -236,7 +274,7 @@ ul.breadcrumb li a:hover {
     flex-wrap: wrap;
   }
 
-  .qwe {
+  .product__grid {
     width: 48% !important;
     max-width: none;
     min-width: 150px;
