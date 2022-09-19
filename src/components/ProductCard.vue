@@ -68,10 +68,6 @@ $base-grey: rgba(75, 75, 75, 0.9);
   }
 }
 
-.product:first-child {
-  margin-left: 0px;
-}
-
 .product {
   margin: 10px;
   display: flex;
