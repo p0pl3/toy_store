@@ -20,10 +20,5 @@ $base-grey: rgba(75, 75, 75, 0.9);
   height: 100%;
   border-radius: 15px;
 }
-@media (max-width: 600px){
-  .banner__image{
-    margin-bottom: 30px;
-  }
-}
 
 </style>
