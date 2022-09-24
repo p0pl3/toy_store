@@ -9,14 +9,12 @@
       </div>
     </div>
   </div>
-
   <div class="">
     <div class="container">
       <div class="cart__title">
         <h2>Cart</h2>
       </div>
       <div class="cart__article">
-
         <div class="cart__products">
           <div class="cart__product-item" v-for="i in (1, 2, 3)" :key="i">
             <img src="@/assets/product_item_1.jpeg" style="width: 100px;">
@@ -24,35 +22,40 @@
               <div class="product-item__info">
                 <h3>Product title</h3>
               </div>
-              <div class="product-item__count" style="width: 40px; height: 20px; background: blue;">
-
+              <div class="product-item__count">
+                <img src="@/assets/remove.svg" style="width: 20px; height: 20px; margin-right: 25px;">
+                <input type="number" value="1" style="width: 40px; border: none; font-size: 20px;">
+                <img src="@/assets/add.svg" style="width: 20px; height: 20px">
               </div>
               <div class="product-item__price">
                 <h3>100$</h3>
               </div>
-              <div class="product-item__action" style="width: 20px; height: 20px; background: blue;">
-
+              <div class="product-item__action">
+                <img src="@/assets/delete.svg" style="width: 30px; height: 30px">
               </div>
             </div>
           </div>
         </div>
-
         <div class="cart__info">
-          <div class="cart__promo" style="width: 100%; height: 200px; background: #1c87c9">
-            <p>Введите промокод</p>
-            <input class="cart__promo-input">
+          <div class="cart__promo">
+            <p style="margin: 0; font-weight: 100;">Enter promo code</p>
+            <input class="cart__promo-input" placeholder="Promo code">
           </div>
-          <div class="cart__description-price" style="width: 100%; height: 150px; background: #1c87c9; margin-top: 5px;">
-            <p>Введите промокод</p>
-            <p>Введите промокод</p>
+          <div class="cart__description-price">
+            <div class="" style="display: flex; justify-content: space-between;">
+              <p>Products (213) </p>
+              <p>123$ </p>
+            </div>
+            <div class="" style="display: flex; justify-content: space-between;">
+              <p>Total price: </p>
+              <p>300$ </p>
+            </div>
           </div>
           <button class="cart__info__confirm-order">Checkout</button>
         </div>
-
       </div>
     </div>
   </div>
-
 
   <SliderProduct/>
 
@@ -68,6 +71,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$base-background: #0073e6;
+$base-background-white: #0381ff;
+$base-grey: rgba(75, 75, 75, 0.9);
+
+.cart__promo {
+  width: 100%;
+}
+.cart__description-price {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.product-item__action {
+  width: 20px;
+  height: 20px;
+}
+
+.product-item__count {
+  display: flex;
+}
 
 .cart__info__confirm-order {
   font-size: 26px;
@@ -75,7 +98,8 @@ export default {
   margin-top: 10px;
   width: 100%;
   padding: 10px;
-  background: #1c87c9;
+  border: none;
+  background: $base-background-white;
   border-radius: 25px;
 }
 
@@ -94,45 +118,54 @@ h3 {
 
 .cart__product-item {
   display: flex;
-  //justify-content: space-between;
-  //align-items: flex-start;
-  background: yellow;
+  border-bottom: 1px solid rgba(200, 200, 200, 1);
   padding: 10px;
 }
+
+.cart__product-item:last-child {
+  border: none;
+}
+
 .cart__promo-input {
+  text-indent: 10px;
   width: 100%;
+  font-size: 25px;
   height: 50px;
   border-radius: 15px;
+  border: 1px solid grey;
 }
+
 .cart__article {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
 .cart__products {
   padding: 10px;
   width: 66%;
-  background: red;
+  background: white;
+  border-radius: 15px;
 }
 
 .cart__info {
   width: 33%;
   padding: 10px;
-  background: red;
+  background: white;
+  border-radius: 15px;
   position: sticky;
-  top: 0;
+  top: 15px;
 
   p {
     margin: 0 0 10px 0;
   }
-
-
 }
 
 ul.breadcrumb {
   padding: 0px 16px;
   list-style: none;
+  margin: 0;
   background-color: #eee;
 }
 
@@ -160,12 +193,11 @@ ul.breadcrumb li a:hover {
 @media screen and (max-width: 820px) {
   .cart__products {
     width: 100%;
-    background: red;
   }
 
   .cart__info {
     width: 100%;
-    background: red;
+    margin-top: 10px;
     position: sticky;
     top: 0;
   }
