@@ -97,7 +97,6 @@ $base-grey: rgba(75, 75, 75, 0.9);
   }
 }
 
-
 .product:first-child {
   margin-left: 5px;
 }

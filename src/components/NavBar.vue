@@ -34,15 +34,6 @@
             </div>
           </transition>
         </div>
-        <!--        <div class="container">-->
-        <!--          <div :class="{'navbar__categories': isOpenBurger, 'navbar__categories__hidden': !isOpenBurger}">-->
-        <!--            <a href="#" class="navbar__menuitem" role="menuitem" :class="{'navbar__menuitem&#45;&#45;toggled': isOpenBurger}">Portfolio</a>-->
-        <!--            <a href="#" class="navbar__menuitem" role="menuitem"-->
-        <!--               :class="{'navbar__menuitem&#45;&#45;toggled': isOpenBurger}">About</a>-->
-        <!--            <a href="#" class="navbar__menuitem" role="menuitem"-->
-        <!--               :class="{'navbar__menuitem&#45;&#45;toggled': isOpenBurger}">Contact</a>-->
-        <!--          </div>-->
-        <!--        </div>-->
       </nav>
     </transition>
     <div class="slider">

@@ -2,23 +2,14 @@
   <div class="slider__sale">
     <div class="container">
       <div class="slider__sale__container" style="position: relative;">
-        <!--          <div class="slider__sale__item" style="">-->
-        <!--            <img :src="currentImg" style="width: 100%; max-height: 400px;">-->
-        <!--          </div>-->
-        <!--        <transition-group name="fade" tag="div">-->
-        <!--          <div v-for="i in [currentSliderSaleImages]" :key="i" class="slider__sale__item" style="position: relative;">-->
-
-        <!--        <img :src="currentImg"  style="width: 100%; max-height: 350px;  border-radius: 15px"/>-->
-        <!--          </div>-->
-        <!--        </transition-group>-->
         <transition name="fade" tag="div" mode="out-in">
           <div>
             <img :src="currentSliderSaleImage"
                  style="width: 100%; max-height: 350px; min-height: 150px; border-radius: 15px"/>
           </div>
         </transition>
-        <a class="slider__previous" @click="previousSliderSale" href="#">&#10094;</a>
-        <a class="slider__next" @click="nextSliderSale" href="#">&#10095;</a>
+        <a class="slider__previous" @click="previousSliderSale">&#10094;</a>
+        <a class="slider__next" @click="nextSliderSale">&#10095;</a>
       </div>
     </div>
   </div>

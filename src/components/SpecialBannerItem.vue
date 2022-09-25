@@ -26,8 +26,6 @@ $base-grey: rgba(75, 75, 75, 0.9);
   min-width: 160px;
 }
 
-
-
 @media (max-width: 600px) {
   .banner__image {
     height: 280px;
