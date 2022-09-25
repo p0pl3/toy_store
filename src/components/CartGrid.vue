@@ -24,7 +24,7 @@
             </div>
           </div>
           <div class="cart__info__confirm-order">
-            <a href="#">Checkout</a>
+            <router-link :to="{ name: 'confirmOrder'}">Checkout</router-link>
           </div>
         </div>
       </div>
