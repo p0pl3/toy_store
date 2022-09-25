@@ -1,110 +1,111 @@
 <template>
   <UpButtonPage/>
-  <div class="">
+  <div>
     <div class="container">
-      <div class="basket">
-        <h1 class="basket__title">Ваш заказ</h1>
-        <div class="basket__item-list">
-          <BasketItem/>
-        </div>
-        <div class="basket__subtotal">
-          <div class="basket__subtotal-item">
-            <div class="basket__subtotal-title">Сумма по товарам</div>
-            <h6 class="basket__subtotal-price">1000$</h6>
+      <div class="order__confirm__container">
+        <div class="basket">
+          <h1 class="basket__title">Ваш заказ</h1>
+          <div class="basket__item-list">
+            <BasketItem/>
           </div>
-          <div class="basket__subtotal-item">
-            <div class="basket__subtotal-title">Стоимость доставки</div>
-            <h6 class="basket__subtotal-price">300$</h6>
-          </div>
+          <div class="basket__subtotal">
+            <div class="basket__subtotal-item">
+              <p class="basket__subtotal-title">Сумма по товарам</p>
+              <h6 class="basket__subtotal-price">1000$</h6>
+            </div>
+            <div class="basket__subtotal-item">
+              <p class="basket__subtotal-title">Стоимость доставки</p>
+              <h6 class="basket__subtotal-price">300$</h6>
+            </div>
 
+          </div>
+          <div class="basket__total">
+            <p class="basket__total-title">Итого:</p>
+            <h6 class="basket__total-price">1300$</h6>
+          </div>
         </div>
-        <div class="basket__total">
-          <div class="basket__total-title">Итого:</div>
-          <h6 class="basket__total-price">1300$</h6>
+        <div class="order">
+          <div class="order__title">
+            <h1>Оформление заказа</h1>
+          </div>
+          <div class="order__form">
+            <h2>Контактные данные</h2>
+            <div class="input__form name required">
+              <label class="input__title" for="contact_name">
+                Ваше имя
+              </label>
+              <input class="my__input" type="text" id="contact_name">
+            </div>
+            <div class="input__form phone required">
+              <label class="input__title" for="input__form contact_phone">
+                Контактный телефон
+              </label>
+              <input class="my__input" type="text" id="contact_phone">
+            </div>
+            <div class="input__form email">
+              <label class="input__title" for="contact_email">
+                Email
+              </label>
+              <input class="my__input" type="text" id="contact_email">
+            </div>
+            <h2>Доставка</h2>
+            <div class="input__form shipping__address required">
+              <label class="input__title" for="contact_email">
+                Населенный пункт
+              </label>
+              <input class="my__input" type="text" id="shipping_address">
+            </div>
+            <div class="delivery__methods">
+              <label class="method" for="method_pickup">
+                <div class="method-input">
+                  <input name="delivery_method" class="my__input-radio" type="radio" id="method_pickup">
+                  <span></span>
+                </div>
+                <div class="method-info">
+                  <h4>Самовывоз</h4>
+                  <h5>Доставка на пункт выдачи</h5>
+                </div>
+                <h6>0$</h6>
+              </label>
+              <label class="method" for="method_delivery">
+                <div class="method-input">
+                  <input name="delivery_method" class="my__input-radio" type="radio" id="method_delivery">
+                  <span></span>
+                </div>
+                <div class="method-info">
+                  <h4>Курьером</h4>
+                  <h5>Доставка на дом курьером</h5>
+                </div>
+                <h6>300$</h6>
+              </label>
+            </div>
+            <div class="payment__methods">
+              <h2>Способ оплаты</h2>
+              <label class="method" for="upon_receipt">
+                <div class="method-input">
+                  <input name="payment_method" class="my__input-radio" type="radio" id="upon_receipt">
+                  <span></span>
+                </div>
+                <div class="method-info">
+                  <h4>При получении</h4>
+                  <h5>Оплата банковской картой или наличными при получении заказа</h5>
+                </div>
+              </label>
+              <label class="method" for="online">
+                <div class="method-input">
+                  <input name="payment_method" class="my__input-radio" type="radio" id="online">
+                  <span></span>
+                </div>
+                <div class="method-info">
+                  <h4>Онлайн</h4>
+                  <h5>Оплата банковской картой онлайн</h5>
+                </div>
+              </label>
+            </div>
+            <button class="confirm__order-button">Подтвердить заказ</button>
+          </div>
         </div>
       </div>
-      <div class="order">
-        <div class="order__title">
-          <h1>Оформление заказа</h1>
-        </div>
-        <div class="order__form">
-          <h2>Контактные данные</h2>
-          <div class="input__form name required">
-            <label class="input__title" for="contact_name">
-              Ваше имя
-            </label>
-            <input class="my__input" type="text" id="contact_name">
-          </div>
-          <div class="input__form phone required">
-            <label class="input__title" for="input__form contact_phone">
-              Контактный телефон
-            </label>
-            <input class="my__input" type="text" id="contact_phone">
-          </div>
-          <div class="input__form email">
-            <label class="input__title" for="contact_email">
-              Email
-            </label>
-            <input class="my__input" type="text" id="contact_email">
-          </div>
-          <h2>Доставка</h2>
-          <div class="input__form shipping__address required">
-            <label class="input__title" for="contact_email">
-              Населенный пункт
-            </label>
-            <input class="my__input" type="text" id="shipping_address">
-          </div>
-          <div class="delivery__methods">
-            <label class="method" for="method_pickup">
-              <div class="method-input">
-                <input name="delivery_method" class="my__input-radio" type="radio" id="method_pickup">
-                <span></span>
-              </div>
-              <div class="method-info">
-                <h4>Самовывоз</h4>
-                <h5>Доставка на пункт выдачи</h5>
-              </div>
-              <h6>0$</h6>
-            </label>
-            <label class="method" for="method_delivery">
-              <div class="method-input">
-                <input name="delivery_method" class="my__input-radio" type="radio" id="method_delivery">
-                <span></span>
-              </div>
-              <div class="method-info">
-                <h4>Курьером</h4>
-                <h5>Доставка на дом курьером</h5>
-              </div>
-              <h6>300$</h6>
-            </label>
-          </div>
-          <div class="payment__methods">
-            <h2>Способ оплаты</h2>
-            <label class="method" for="upon_receipt">
-              <div class="method-input">
-                <input name="payment_method" class="my__input-radio" type="radio" id="upon_receipt">
-                <span></span>
-              </div>
-              <div class="method-info">
-                <h4>При получении</h4>
-                <h5>Оплата банковской картой или наличными при получении заказа</h5>
-              </div>
-            </label>
-            <label class="method" for="online">
-              <div class="method-input">
-                <input name="payment_method" class="my__input-radio" type="radio" id="online">
-                <span></span>
-              </div>
-              <div class="method-info">
-                <h4>Онлайн</h4>
-                <h5>Оплата банковской картой онлайн</h5>
-              </div>
-            </label>
-          </div>
-          <button class="confirm__order">Подтвердить заказ</button>
-        </div>
-      </div>
-
     </div>
   </div>
 </template>
@@ -119,11 +120,11 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
 $base-background: #0073e6;
 $base-background-white: #0381ff;
 $base-grey: rgba(75, 75, 75, 0.9);
+
 h1, h2 {
   margin: 20px 0 20px 0;
 }
@@ -153,7 +154,7 @@ h6 {
   text-align: end;
 }
 
-.container {
+.order__confirm__container {
   display: flex;
   flex-direction: row-reverse;
 }
@@ -161,7 +162,7 @@ h6 {
 .basket {
   box-shadow: inset 4px 0 5px -3px #cccccc;
   width: 50%;
-  padding: 15px;
+  padding-left: 20px;
 }
 
 .basket__subtotal {
@@ -179,7 +180,8 @@ h6 {
 
 .basket__subtotal-title {
   font-size: 16px;
-  flex: 1 1 content;
+  width: 100%;
+  margin: 0;
 }
 
 .basket__total {
@@ -190,7 +192,8 @@ h6 {
 }
 
 .basket__total-title {
-  flex: 1 1 content;
+  width: 100%;
+  margin: 0;
 }
 
 .basket__total-price {
@@ -199,7 +202,7 @@ h6 {
 
 .order {
   width: 50%;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .input__form {
@@ -232,15 +235,19 @@ h6 {
   padding: 10px 0 10px 0;
 }
 
+.method:hover {
+  cursor: pointer;
+}
+
 .method-info {
-  flex: 1 1 content;
+  width: 100%;
   padding: 5px;
 }
 
 .method-input {
   display: flex;
   align-items: center;
-  flex: 0 0 36px;
+  width: 36px;
 }
 
 .my__input-radio {
@@ -259,11 +266,7 @@ input[type="radio"]:checked + span {
   background: $base-background-white;
 }
 
-.payment__method-input {
-  flex: 0 1 2rem;
-}
-
-.confirm__order {
+.order__confirm-button {
   width: 100%;
   height: 50px;
   margin: 40px 0;
@@ -274,6 +277,10 @@ input[type="radio"]:checked + span {
   border: none;
 }
 
+.order__confirm-button:hover {
+  cursor: pointer;
+}
+
 .required > label:after {
   content: "*";
   color: red;
@@ -281,16 +288,18 @@ input[type="radio"]:checked + span {
 }
 
 @media (max-width: 810px) {
-  .container {
-    display: block;
+  .order__confirm__container {
+    flex-direction: column;
   }
   .basket {
     width: 100%;
     box-shadow: inset 0px -5px 4px -3px #cccccc;
+    padding-left: 0;
+    padding-bottom: 20px;
   }
   .order {
     width: 100%;
-    margin-right: 15px;
+    margin-right: 0;
   }
 }
 </style>

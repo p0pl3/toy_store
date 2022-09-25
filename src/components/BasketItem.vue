@@ -2,9 +2,9 @@
   <div class="basket__item">
     <img class="basket__item-image" src="@/assets/product_1.jpeg">
     <div class="basket__item-description">
-      Сапоги/Antilopa
+      Lorem Ipsum Lorem Ips
     </div>
-    <div class="basket__item-price">1000$</div>
+    <p class="basket__item-price">1000$</p>
   </div>
 </template>
 
@@ -20,7 +20,9 @@ export default {
   align-items: center;
   margin-bottom: 20px;
 }
-
+p{
+  margin: 0;
+}
 .basket__item-image {
   width: 100px;
   height: 100px;
