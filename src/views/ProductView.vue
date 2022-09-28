@@ -2,26 +2,31 @@
   <div>
     <div class="container">
       <div class="product__container">
-        <div class="product__images">
-          <img src="@/assets/product_1.jpeg" alt="">
-        </div>
-        <div class="product__info">
-          <div class="product__rating">
 
-          </div>
-          <h1>Lorem Ipsum Lorem Ips</h1>
+        <div class="product__gallery">
+
+          <SliderImages/>
+        </div>
+
+        <div class="product__info">
+
+          <div class="product__rating"></div>
+
+          <h1 class="product__title">Lorem Ipsum Lorem Ips</h1>
           <h2 class="product__price">300$</h2>
 
           <div class="product__controls">
             <button class="buy__button">
-                <span>В корзину</span>
-                <img class="cart__image" src="@/assets/cart.svg" alt="">
+              <span>В корзину</span>
+              <img class="cart__image" src="@/assets/cart.svg">
             </button>
             <img class="wish__button" src="@/assets/wish.svg">
           </div>
+
           <div class="product__compare">
             <p>В сравнении</p>
           </div>
+
           <div class="product__characteristics">
             <h3>Характеристики</h3>
             <div class="characteristic">
@@ -65,8 +70,11 @@
 </template>
 
 <script>
+import SliderImages from "@/components/SliderImages";
+
 export default {
-  name: "ProductView"
+  name: "ProductView",
+  components: {SliderImages},
 }
 </script>
 
@@ -94,16 +102,19 @@ p {
 .product__container {
   display: flex;
   align-items: start;
+  justify-content: space-between;
+  margin: 0 0 20px 0;
+  padding: 0;
 }
 
-.product__images {
-  width: 60%;
+.product__gallery {
+  width: 59%;
   position: sticky;
   top: 10px;
 }
 
 .product__info {
-  width: 40%;
+  width: 39%;
 }
 
 .product__controls {
@@ -124,9 +135,9 @@ p {
   font-size: 20px;
   color: #FFFFFF;
   border: none;
-  justify-content:center;
+  justify-content: center;
   display: flex;
-  align-items:center;
+  align-items: center;
 }
 
 .cart__image {
@@ -164,5 +175,22 @@ p {
   color: #FFFFFF;
   border: none;
   padding: 0 20px;
+}
+
+@media (max-width: 1000px) {
+  .product__container {
+    display: block;
+    align-items: normal;
+  }
+  .product__gallery, .product__info {
+    width: 100%;
+    position: relative;
+  }
+  .product__info {
+    padding: 0 20px;
+  }
+  .product__gallery {
+    margin-bottom: 40px;
+  }
 }
 </style>
