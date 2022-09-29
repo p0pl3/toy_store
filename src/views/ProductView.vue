@@ -1,0 +1,185 @@
+<template>
+  <div>
+    <div class="container">
+      <div class="product__container">
+        <div class="product__gallery">
+          <SliderImages/>
+        </div>
+        <div class="product__info">
+          <div class="product__rating"></div>
+          <h1 class="product__title">Lorem Ipsum Lorem Ips</h1>
+          <h2 class="product__price">300$</h2>
+          <div class="product__controls">
+            <button class="buy__button">
+              <span>В корзину</span>
+              <img class="cart__image" src="@/assets/cart.svg">
+            </button>
+            <img class="wish__button" src="@/assets/wish.svg">
+          </div>
+          <div class="product__compare">
+            <p>В сравнении</p>
+          </div>
+          <div class="product__characteristics">
+            <h3>Характеристики</h3>
+            <div class="characteristic">
+              <p class="characteristic-name">Вид застежки</p>
+              <p class="characteristic-type">молния</p>
+            </div>
+            <div class="characteristic">
+              <p class="characteristic-name">Спортивное назначение</p>
+              <p class="characteristic-type">гимнастика</p>
+            </div>
+            <div class="characteristic">
+              <p class="characteristic-name">Декоративные элементы</p>
+              <p class="characteristic-type">светоотражающие вставки</p>
+            </div>
+            <div class="characteristic">
+              <p class="characteristic-name">Карманы</p>
+              <p class="characteristic-type">Наружный спереди; Наружный боковой; Внутренний для ноутбука/планшета</p>
+            </div>
+          </div>
+          <div class="product__description">
+            <h3>Описание</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.
+            </p>
+          </div>
+          <div class="product__reviews">
+            <h3>Отзывы</h3>
+            <button class="button-write__review">Написать отзыв</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import SliderImages from "@/components/SliderImages";
+
+export default {
+  name: "ProductView",
+  components: {SliderImages},
+}
+</script>
+
+<style lang="scss" scoped>
+$base-background: #0073e6;
+$base-background-white: #0381ff;
+$base-grey: rgba(75, 75, 75, 0.9);
+
+h1, h2 {
+  font-size: 30px;
+  margin: 0 0 40px 0;
+}
+
+h3 {
+  font-size: 25px;
+  margin: 0 0 10px 0;
+}
+
+p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.product__container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.product__gallery {
+  width: 59%;
+  position: sticky;
+  top: 10px;
+}
+
+.product__info {
+  width: 39%;
+}
+
+.product__controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.product__compare {
+  margin-bottom: 40px;
+}
+
+.buy__button {
+  min-width: 85%;
+  height: 50px;
+  border-radius: 10px;
+  background: $base-background-white;
+  font-size: 20px;
+  color: #FFFFFF;
+  border: none;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.cart__image {
+  width: 21px;
+  margin-left: 10px;
+}
+
+.wish__button {
+  width: 25px;
+}
+
+.product__characteristics {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.characteristic {
+  margin-bottom: 10px;
+}
+
+.characteristic-name {
+  color: #999999;
+  font-size: 14px;
+}
+
+.product__description {
+  margin-bottom: 20px;
+}
+
+.button-write__review {
+  height: 40px;
+  border-radius: 10px;
+  background: $base-background-white;
+  font-size: 16px;
+  color: #FFFFFF;
+  border: none;
+  padding: 0 20px;
+}
+
+@media (max-width: 1000px) {
+  .product__container {
+    display: block;
+    align-items: normal;
+  }
+  .product__gallery, .product__info {
+    width: 100%;
+    position: relative;
+  }
+  .product__info {
+    padding: 0 20px;
+  }
+  .product__gallery {
+    margin-bottom: 40px;
+  }
+}
+</style>
