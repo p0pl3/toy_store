@@ -1,29 +1,29 @@
 <template>
   <div class="slider__horizontal">
     <div class="images__preview">
-      <input type="radio" id="slide1" value="0" v-model="currentSlide" @click="currentSlide=0">
+      <input type="radio" id="slide1" value="0" v-model="this.currentSlide" @click="this.currentSlide=0">
       <label for="slide1"><img src="@/assets/product_1.jpeg"></label>
-      <input type="radio" id="slide2" value="1" v-model="currentSlide" @click="currentSlide=1">
+      <input type="radio" id="slide2" value="1" v-model="this.currentSlide" @click="this.currentSlide=1">
       <label for="slide2"><img src="@/assets/product_1.jpeg"></label>
-      <input type="radio" id="slide3" value="2" v-model="currentSlide" @click="currentSlide=2">
+      <input type="radio" id="slide3" value="2" v-model="this.currentSlide" @click="this.currentSlide=2">
       <label for="slide3"><img src="@/assets/product_1.jpeg"></label>
     </div>
     <div class="slider">
-      <a v-if="currentSlide>0" @click="prevSlide">
+      <a v-if="this.currentSlide>0" @click="prevSlide">
         <img src="@/assets/arrow_back_2.svg" style="width: 30px; height: 30px">
       </a>
       <div class="slider__list">
-        <div class="slider__item" :style="{transform: getCurrentTranslate}" ref="widthImg">
+        <div class="slider__item" :style="{transform: this.getCurrentTranslate}" ref="SliderHorizontalSliderItem">
           <img src="@/assets/product_1.jpeg">
         </div>
-        <div class="slider__item" :style="{transform: getCurrentTranslate}">
+        <div class="slider__item" :style="{transform: this.getCurrentTranslate}">
           <img src="@/assets/product_1.jpeg">
         </div>
-        <div class="slider__item" :style="{transform: getCurrentTranslate}">
+        <div class="slider__item" :style="{transform: this.getCurrentTranslate}">
           <img src="@/assets/product_1.jpeg">
         </div>
       </div>
-      <a v-if="currentSlide<2" @click="nextSlide" class="button__next">
+      <a v-if="this.currentSlide<2" @click="nextSlide" class="button__next">
         <img src="@/assets/arrow_forward.svg" style="width: 30px; height: 30px">
       </a>
     </div>
@@ -36,12 +36,12 @@ export default {
   data() {
     return {
       currentSlide: 0,
-      curWidth: 0,
+      currentWidth: 0,
     }
   },
   computed: {
     getCurrentTranslate() {
-      return 'translateX(' + this.currentSlide * this.curWidth + 'px)';
+      return 'translateX(' + this.currentSlide * this.currentWidth + 'px)';
     },
 
   },
@@ -59,7 +59,7 @@ export default {
       this.currentSlide -= 1;
     },
     updateWidth() {
-      this.curWidth = -this.$refs.widthImg.clientWidth;
+      this.currentWidth = -this.$refs.SliderHorizontalSliderItem.clientWidth;
     },
   },
 }

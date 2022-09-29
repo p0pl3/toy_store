@@ -2,19 +2,13 @@
   <div>
     <div class="container">
       <div class="product__container">
-
         <div class="product__gallery">
-
           <SliderImages/>
         </div>
-
         <div class="product__info">
-
           <div class="product__rating"></div>
-
           <h1 class="product__title">Lorem Ipsum Lorem Ips</h1>
           <h2 class="product__price">300$</h2>
-
           <div class="product__controls">
             <button class="buy__button">
               <span>В корзину</span>
@@ -22,11 +16,9 @@
             </button>
             <img class="wish__button" src="@/assets/wish.svg">
           </div>
-
           <div class="product__compare">
             <p>В сравнении</p>
           </div>
-
           <div class="product__characteristics">
             <h3>Характеристики</h3>
             <div class="characteristic">
@@ -46,7 +38,6 @@
               <p class="characteristic-type">Наружный спереди; Наружный боковой; Внутренний для ноутбука/планшета</p>
             </div>
           </div>
-
           <div class="product__description">
             <h3>Описание</h3>
             <p>
@@ -57,12 +48,10 @@
               mollit anim id est laborum.
             </p>
           </div>
-
           <div class="product__reviews">
             <h3>Отзывы</h3>
             <button class="button-write__review">Написать отзыв</button>
           </div>
-
         </div>
       </div>
     </div>

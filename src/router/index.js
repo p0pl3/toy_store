@@ -4,6 +4,7 @@ import ProductsCatalog from "@/views/ProductsCatalog";
 import NewOrder from "@/views/NewOrder";
 import ProductsCart from "@/views/ProductsCart";
 import ProductView from "@/views/ProductView";
+
 const routes = [
     {
         path: "/",
