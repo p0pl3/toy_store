@@ -1,7 +1,7 @@
 import {createWebHistory, createRouter} from "vue-router";
 import HomeView from "@/views/HomeView";
 import ProductsCatalog from "@/views/ProductsCatalog";
-import NewOrder from "@/views/NewOrder";
+import confirmOrder from "@/views/NewOrder";
 import ProductsCart from "@/views/ProductsCart";
 import ProductView from "@/views/ProductView";
 import LoginView from "@/views/LoginView";
@@ -19,9 +19,9 @@ const routes = [
         component: ProductsCatalog,
     },
     {
-        path: "/new_order",
-        name: "NewOrder",
-        component: NewOrder,
+        path: "/confirm-order",
+        name: "confirmOrder",
+        component: confirmOrder,
     },
     {
         path: "/cart",
