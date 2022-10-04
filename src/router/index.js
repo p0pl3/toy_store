@@ -4,8 +4,10 @@ import ProductsCatalog from "@/views/ProductsCatalog";
 import confirmOrder from "@/views/NewOrder";
 import ProductsCart from "@/views/ProductsCart";
 import ProductView from "@/views/ProductView";
+import ProfileView from "@/views/ProfileView";
 import LoginView from "@/views/LoginView";
 import SignUpView from "@/views/SignUpView";
+
 
 const routes = [
     {
@@ -34,6 +36,10 @@ const routes = [
         component: ProductView,
     },
     {
+        path: "/profile",
+        name: "ProfileView",
+        component: ProfileView,
+    },
         path: "/login",
         name: "LoginView",
         component: LoginView,
