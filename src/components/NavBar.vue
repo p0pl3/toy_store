@@ -4,7 +4,7 @@
       <nav class="navbar" v-if="isVisibleNavbar">
         <div class="container">
           <div class="navbar__inner">
-            <a href="#" class="navbar__logo">Toy Store</a>
+            <router-link :to="{ name: 'HomeView'}" class="navbar__logo">Toy Store</router-link>
             <button class="navbar__hamburger" :class="{'navbar__hamburger--toggled': isOpenBurger}"
                     @click="this.isOpenBurger = !this.isOpenBurger" aria-label="menu" aria-controls="navigation">
               <span class="navbar__hamburger-top" :class="{'navbar__hamburger-top--toggled': isOpenBurger}"></span>
@@ -20,7 +20,7 @@
                 <a href="https://google.com"><img src="@/assets/profile.svg"></a>
               </div>
               <div class="navbar__cart">
-                <a href="https://google.com"><img src="@/assets/cart.svg"></a>
+                <router-link :to="{ name: 'ProductsCart'}"><img src="@/assets/cart.svg"></router-link>
               </div>
             </div>
           </div>
@@ -34,15 +34,6 @@
             </div>
           </transition>
         </div>
-        <!--        <div class="container">-->
-        <!--          <div :class="{'navbar__categories': isOpenBurger, 'navbar__categories__hidden': !isOpenBurger}">-->
-        <!--            <a href="#" class="navbar__menuitem" role="menuitem" :class="{'navbar__menuitem&#45;&#45;toggled': isOpenBurger}">Portfolio</a>-->
-        <!--            <a href="#" class="navbar__menuitem" role="menuitem"-->
-        <!--               :class="{'navbar__menuitem&#45;&#45;toggled': isOpenBurger}">About</a>-->
-        <!--            <a href="#" class="navbar__menuitem" role="menuitem"-->
-        <!--               :class="{'navbar__menuitem&#45;&#45;toggled': isOpenBurger}">Contact</a>-->
-        <!--          </div>-->
-        <!--        </div>-->
       </nav>
     </transition>
     <div class="slider">
@@ -50,14 +41,16 @@
         <div class="slider__categories__list" style="position: relative;">
           <div class="slider__categories" ref="sliderCategory">
             <div class="slider__item" v-for="i in (1,2,3,4,5,6,7,8)" :key="{i}">
-              <a href="https://google.com"><img src="@/assets/shoes.svg" style="width: 40%; height: 40%;"></a>
+              <router-link :to="{ name: 'ProductsCatalog'}">
+                <img src="@/assets/shoes.svg" style="width: 40%; height: 40%;">
+              </router-link>
               <h4>Category</h4>
             </div>
           </div>
           <div class="slider__categories-control">
             <a @click="previousCategory"
                style="color: grey; text-decoration: none; position: absolute; left: 0; top: 25%; padding: 5px; cursor: pointer;">&#10094;</a>
-            <a @click="nextCategory" href="#"
+            <a @click="nextCategory"
                style=" color: grey; text-decoration: none; position: absolute; right: 0;  top: 25%; padding: 5px; cursor: pointer;">&#10095;</a>
           </div>
         </div>
