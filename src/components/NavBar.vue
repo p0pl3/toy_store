@@ -17,7 +17,7 @@
 
             <div class="navbar__area-controls">
               <div class="navbar__profile">
-                <a href="https://google.com"><img src="@/assets/profile.svg"></a>
+                <router-link :to="{name: 'ProfileView'}"><img src="@/assets/profile.svg"></router-link>
               </div>
               <div class="navbar__cart">
                 <router-link :to="{ name: 'ProductsCart'}"><img src="@/assets/cart.svg"></router-link>
