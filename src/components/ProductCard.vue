@@ -6,9 +6,9 @@
       </router-link>
     </div>
     <div class="product__description">
-      <div class="product__title">
+      <router-link :to="{name: 'ProductView'}" class="product__title">
         <h3> Lorem Ipsum Lorem Ips</h3>
-      </div>
+      </router-link>
       <div class="product__price">
         <div class="prices">
           <h4 class="new__price">100$</h4>
@@ -23,16 +23,8 @@
         </div>
       </div>
     </div>
-    <div class="product__wish">
-      <svg id="heartSymbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
-           @click="changeColor">
-        <g>
-          <path stroke-width="5" :style="{fill: this.currentFillColor, stroke: this.currentStrokeColor}"
-                d="M24.85,10.126c2.018-4.783,6.628-8.125,11.99-8.125c7.223,0,12.425,6.179,13.079,13.543
-	c0,0,0.353,1.828-0.424,5.119c-1.058,4.482-3.545,8.464-6.898,11.503L24.85,48L7.402,32.165c-3.353-3.038-5.84-7.021-6.898-11.503
-	c-0.777-3.291-0.424-5.119-0.424-5.119C0.734,8.179,5.936,2,13.159,2C18.522,2,22.832,5.343,24.85,10.126z"/>
-        </g>
-      </svg>
+    <div class="wish__button">
+      <WishButton/>
     </div>
     <div class="product__sale">
       <h5>-40%</h5>
@@ -41,25 +33,15 @@
 </template>
 
 <script>
+import WishButton from "@/components/WishButton";
+
 export default {
+
   name: "ProductCard",
+  components: {WishButton},
   data() {
     return {
-      currentFillColor: "none",
-      currentStrokeColor: "grey",
       product_count: 0
-    }
-
-  },
-  methods: {
-    changeColor: function () {
-      if (this.currentFillColor === "red") {
-        this.currentFillColor = "none";
-        this.currentStrokeColor = "grey";
-      } else {
-        this.currentFillColor = "red"
-        this.currentStrokeColor = "red";
-      }
     }
   }
 }
@@ -77,10 +59,21 @@ $base-grey: rgba(75, 75, 75, 0.9);
   padding-top: 15px;
 }
 
+.product__title {
+  text-decoration: none;
+}
+
 .cart__image {
+  box-sizing: content-box;
+  border-radius: 10px;
   width: 27px;
   height: 27px;
   cursor: pointer;
+  padding: 5px;
+}
+
+.cart__image:hover {
+  background: #2196F3;
 }
 
 .product__counter {
@@ -97,21 +90,11 @@ $base-grey: rgba(75, 75, 75, 0.9);
   color: white;
 }
 
-.added_in_cart {
-  display: none;
-}
-
-.product__wish {
+.wish__button {
   position: absolute;
   right: 10px;
   width: 27px;
   height: 27px;
-  cursor: pointer;
-
-  svg {
-    height: 24px;
-    width: 27px;
-  }
 }
 
 .product__sale {
@@ -190,10 +173,6 @@ $base-grey: rgba(75, 75, 75, 0.9);
     width: 20px;
     height: 20px;
   }
-  .wish__image {
-    width: 25px;
-    height: 25px;
-  }
   .product__sale {
     left: 5px;
     background: red;
@@ -217,13 +196,9 @@ $base-grey: rgba(75, 75, 75, 0.9);
   .old__price {
     font-size: 15px !important;
   }
-  .product__wish{
+  .wish__button {
     width: 20px;
     height: 20px;
-    svg{
-      height: 18px;
-      width: 20px;
-    }
   }
 }
 </style>
