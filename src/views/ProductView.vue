@@ -10,11 +10,22 @@
           <h1 class="product__title">Lorem Ipsum Lorem Ips</h1>
           <h2 class="product__price">300$</h2>
           <div class="product__controls">
-            <button class="buy__button">
-              <span>В корзину</span>
+            <button v-if="this.product_count===0" class="buy__button" @click="this.product_count+=1">
+              <h>В корзину</h>
               <img class="cart__image" src="@/assets/cart.svg">
             </button>
-            <img class="wish__button" src="@/assets/wish.svg">
+            <div v-if="this.product_count>0" class="product__counter">
+              <span class="product__counter-minus" @click="this.product_count-=1">-</span>
+              <router-link :to="{name: 'ProductsCart'}" class="product__counter-center">
+                <p style="font-size: 14px">В корзине {{ this.product_count }} шт</p>
+                <p style="font-size: 12px">Перейти в корзину</p>
+              </router-link>
+
+              <span class="product__counter-plus" @click="this.product_count+=1">+</span>
+            </div>
+            <div class="wish__button">
+              <WishButton/>
+            </div>
           </div>
           <div class="product__compare">
             <p>В сравнении</p>
@@ -60,10 +71,16 @@
 
 <script>
 import SliderImages from "@/components/SliderImages";
+import WishButton from "@/components/WishButton";
 
 export default {
   name: "ProductView",
-  components: {SliderImages},
+  components: {SliderImages, WishButton},
+  data() {
+    return {
+      product_count: 0
+    }
+  }
 }
 </script>
 
@@ -110,6 +127,7 @@ p {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
+  align-items: center;
 }
 
 .product__compare {
@@ -127,6 +145,46 @@ p {
   justify-content: center;
   display: flex;
   align-items: center;
+  cursor: pointer;
+}
+
+.product__counter {
+  display: flex;
+  cursor: pointer;
+  min-width: 85%;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.product__counter span, a {
+  display: inline-flex;
+  background: $base-background-white;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+}
+
+.product__counter-center {
+  min-width: 65%;
+  flex-direction: column;
+  text-align: center;
+}
+
+.product__counter-plus {
+  width: 100%;
+  margin-left: 2px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.product__counter-minus {
+  width: 100%;
+  margin-right: 2px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .cart__image {
@@ -135,7 +193,9 @@ p {
 }
 
 .wish__button {
-  width: 25px;
+  width: 27px;
+  height: 27px;
+  display: flex;
 }
 
 .product__characteristics {
