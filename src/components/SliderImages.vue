@@ -1,12 +1,12 @@
 <template>
   <div class="slider__horizontal">
     <div class="images__preview">
-      <input type="radio" id="slide1" value="0" v-model="this.currentSlide" @click="this.currentSlide=0">
-      <label for="slide1"><img src="@/assets/product_1.jpeg"></label>
-      <input type="radio" id="slide2" value="1" v-model="this.currentSlide" @click="this.currentSlide=1">
-      <label for="slide2"><img src="@/assets/product_1.jpeg"></label>
-      <input type="radio" id="slide3" value="2" v-model="this.currentSlide" @click="this.currentSlide=2">
-      <label for="slide3"><img src="@/assets/product_1.jpeg"></label>
+      <input type="radio" id="slide1" @click='this.currentSlide=0'>
+      <label for="slide1" :class="{input__checked: this.currentSlide===0}"><img src="@/assets/product_1.jpeg"></label>
+      <input type="radio" id="slide2" @click="this.currentSlide=1">
+      <label for="slide2" :class="{input__checked: this.currentSlide===1}"><img src="@/assets/product_1.jpeg"></label>
+      <input type="radio" id="slide3" @click="this.currentSlide=2">
+      <label for="slide3" :class="{input__checked: this.currentSlide===2}"><img src="@/assets/product_1.jpeg"></label>
     </div>
     <div class="slider">
       <a v-if="this.currentSlide>0" @click="prevSlide">
@@ -36,7 +36,7 @@ export default {
   data() {
     return {
       currentSlide: 0,
-      currentWidth: 0,
+      currentWidth: 0
     }
   },
   computed: {
@@ -48,7 +48,7 @@ export default {
   created() {
     window.addEventListener("resize", this.updateWidth);
   },
-  mounted () {
+  mounted() {
     this.updateWidth()
   },
   methods: {
@@ -85,16 +85,16 @@ input {
   display: none;
 }
 
-input:checked + label {
-  border: 2px solid $base-background-white;
-  padding: 3px;
-}
-
 .images__preview > label {
   display: block;
   cursor: pointer;
   padding: 5px;
   width: 135px;
+}
+
+.input__checked {
+  border: 2px solid $base-background-white;
+  padding: 3px !important;
 }
 
 .images__preview > label > img {
@@ -133,9 +133,9 @@ input:checked + label {
   .button__next {
     margin-left: 270px;
   }
-  .slider{
-    width:300px;
-    height:300px;
+  .slider {
+    width: 300px;
+    height: 300px;
   }
   .images__preview {
     display: none;
