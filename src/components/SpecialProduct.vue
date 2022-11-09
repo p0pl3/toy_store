@@ -114,6 +114,12 @@ $base-grey: rgba(75, 75, 75, 0.9);
   max-width: 200px;
   min-width: 200px;
 }
+.product .count_pc{
+  display: none !important;
+}
+.product .count_mob{
+  display: block !important;
+}
 
 @media (max-width: 600px) {
   .special__product-banner {

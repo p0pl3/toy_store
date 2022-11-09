@@ -20,7 +20,6 @@
                 <p style="font-size: 14px">В корзине {{ this.product_count }} шт</p>
                 <p style="font-size: 12px">Перейти в корзину</p>
               </router-link>
-
               <span class="product__counter-plus" @click="this.product_count+=1">+</span>
             </div>
             <div class="wish__button">

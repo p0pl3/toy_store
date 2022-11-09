@@ -43,7 +43,6 @@ export default {
     getCurrentTranslate() {
       return 'translateX(' + this.currentSlide * this.currentWidth + 'px)';
     },
-
   },
   created() {
     window.addEventListener("resize", this.updateWidth);

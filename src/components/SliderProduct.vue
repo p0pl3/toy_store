@@ -25,9 +25,6 @@ import ProductCard from "@/components/ProductCard";
 export default {
   name: "SliderProduct",
   components: {ProductCard},
-  data() {
-
-  },
   methods: {
     nextProductHorizontalSlider: function () {
       this.$refs.ProductListHorizontalSlider.scrollTo({
