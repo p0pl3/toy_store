@@ -16,8 +16,6 @@ export default {
 
   data() {
     return {
-      currentFillColor: "none",
-      currentStrokeColor: "grey",
       isAdded: false
     }
   },

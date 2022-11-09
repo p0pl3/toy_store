@@ -1,5 +1,5 @@
 <template>
-  <div class="product">
+  <div class="product" ref="Product">
     <div class="product__image">
       <router-link :to="{name: 'ProductView'}">
         <img src="@/assets/product_1.jpeg" style="border-radius: 15px; width: 100%; ">
@@ -9,7 +9,7 @@
       <router-link :to="{name: 'ProductView'}" class="product__title">
         <h3>Lorem Ipsum Lorem Ips</h3>
       </router-link>
-      <div  class="product__price">
+      <div class="product__price">
         <div v-if="this.product_count===0" class="prices">
           <h4 class="new__price">100$</h4>
           <h4 class="old__price">123$</h4>
@@ -19,10 +19,10 @@
         <div v-if="this.product_count>0" class="product__counter">
           <span class="product__counter-minus" @click="this.product_count-=1">&#8211;</span>
           <router-link :to="{name: 'ProductsCart'}" class="product__counter-center">
-            <p style="font-size: 14px" class="count_pc">В корзине {{ this.product_count }} шт</p>
-            <p style="font-size: 12px" class="count_pc">Перейти в корзину</p>
-            <p style="font-size: 14px" class="count_mob">{{ this.product_count }} шт</p>
-            <p style="font-size: 12px" class="count_mob">В корзину</p>
+            <p style="font-size: 14px" v-if="!this.mobile">В корзине {{ this.product_count }} шт</p>
+            <p style="font-size: 12px" v-if="!this.mobile">Перейти в корзину</p>
+            <p style="font-size: 14px" v-if="this.mobile">{{ this.product_count }} шт</p>
+            <p style="font-size: 12px" v-if="this.mobile">В корзину</p>
           </router-link>
           <span class="product__counter-plus" @click="this.product_count+=1">+</span>
         </div>
@@ -46,7 +46,23 @@ export default {
   components: {WishButton},
   data() {
     return {
-      product_count: 0
+      product_count: 0,
+      mobile: false
+    }
+  },
+  created() {
+    window.addEventListener("resize", this.updateButton);
+  },
+  mounted() {
+    this.updateButton()
+  },
+  methods: {
+    updateButton() {
+      if (this.$refs.Product.clientWidth < 300) {
+        this.mobile = true;
+      }else{
+        this.mobile = false;
+      }
     }
   }
 }
@@ -85,12 +101,13 @@ $base-grey: rgba(75, 75, 75, 0.9);
 .product__counter {
   display: flex;
   cursor: pointer;
-  width:100%;
+  width: 100%;
   border-radius: 10px;
   font-size: 20px;
   height: 43px;
-  p{
-    margin:0;
+
+  p {
+    margin: 0;
   }
 }
 
@@ -110,7 +127,7 @@ $base-grey: rgba(75, 75, 75, 0.9);
   text-align: center;
 }
 
-.count_mob{
+.count_mob {
   display: none;
 }
 
@@ -208,15 +225,15 @@ $base-grey: rgba(75, 75, 75, 0.9);
     font-size: 17px;
   }
 
-  .product__counter{
+  .product__counter {
     height: 38px;
   }
 
-  .count_mob{
+  .count_mob {
     display: block;
   }
 
-  .count_pc{
+  .count_pc {
     display: none;
   }
 

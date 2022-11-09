@@ -25,12 +25,13 @@
             </div>
           </div>
           <transition name="hidden-navbar">
-            <div :class="{'navbar__categories': isOpenBurger, 'navbar__categories__hidden': !isOpenBurger}">
-              <a href="#" class="navbar__menuitem" role="menuitem" :class="{'navbar__menuitem--toggled': isOpenBurger}">Home</a>
-              <a href="#" class="navbar__menuitem" role="menuitem"
-                 :class="{'navbar__menuitem--toggled': isOpenBurger}">Profile</a>
-              <a href="#" class="navbar__menuitem" role="menuitem"
-                 :class="{'navbar__menuitem--toggled': isOpenBurger}">Contact</a>
+            <div :class="{'navbar__categories': isOpenBurger, 'navbar__categories__hidden': !isOpenBurger}" >
+              <router-link :to="{ name: 'ProductsCatalog'}" class="navbar__menuitem" role="menuitem"
+                           :class="{'navbar__menuitem--toggled': isOpenBurger}" v-for="i in (1,2,3,4,5,6,7,8)"
+                           :key="{i}" style="align-items: center">
+                <img src="@/assets/shoes.svg" style="width: 30px; height: 30px; margin-right: 20px">
+                <h4 style="margin: 0;">Category</h4>
+              </router-link>
             </div>
           </transition>
         </div>
@@ -106,7 +107,6 @@ export default {
 $base-background: #0073e6;
 $base-background-white: #0381ff;
 $base-grey: rgba(75, 75, 75, 0.9);
-
 
 .hidden-navbar-enter-active, .hidden-navbar-leave-active {
   transition: opacity .5s;
@@ -262,7 +262,7 @@ a {
 
 .navbar__menuitem--toggled {
   background-color: $base-background;
-  display: block;
+  display: flex;
 }
 
 .navbar__menuitem:hover {
@@ -328,7 +328,7 @@ a {
     font-weight: 100;
   }
   .slider {
-    margin-top: 125px;
+    display: none;
   }
   .navbar__profile {
     width: 25px;

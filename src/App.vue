@@ -46,4 +46,10 @@ html, body {
 .window {
   min-height: 46vh;
 }
+
+@media (max-width: 600px) {
+  .window {
+   margin-top: 150px;
+  }
+}
 </style>
