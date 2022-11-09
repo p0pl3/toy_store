@@ -49,8 +49,6 @@ export default {
     submitForm() {
       if (this.v$.$validate()) {
         this.$emit("submitForm", this.userLog);
-      } else {
-        return
       }
     }
   },

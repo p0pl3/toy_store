@@ -26,9 +26,9 @@
           </div>
           <transition name="hidden-navbar">
             <div :class="{'navbar__categories': isOpenBurger, 'navbar__categories__hidden': !isOpenBurger}">
-              <a href="#" class="navbar__menuitem" role="menuitem" :class="{'navbar__menuitem--toggled': isOpenBurger}">Portfolio</a>
+              <a href="#" class="navbar__menuitem" role="menuitem" :class="{'navbar__menuitem--toggled': isOpenBurger}">Home</a>
               <a href="#" class="navbar__menuitem" role="menuitem"
-                 :class="{'navbar__menuitem--toggled': isOpenBurger}">About</a>
+                 :class="{'navbar__menuitem--toggled': isOpenBurger}">Profile</a>
               <a href="#" class="navbar__menuitem" role="menuitem"
                  :class="{'navbar__menuitem--toggled': isOpenBurger}">Contact</a>
             </div>

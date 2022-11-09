@@ -93,8 +93,7 @@ $base-grey: rgba(75, 75, 75, 0.9);
 }
 
 .content {
-  width: 32% !important;
-  margin: 0 1% 0 0;
+  width: 31% !important;
   max-width: none;
   min-width: 200px;
 }

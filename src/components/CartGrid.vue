@@ -23,9 +23,7 @@
               <p>300$ </p>
             </div>
           </div>
-          <div class="cart__info__confirm-order">
-            <router-link :to="{ name: 'confirmOrder'}">Checkout</router-link>
-          </div>
+          <router-link class="cart__info__confirm-order" :to="{ name: 'confirmOrder'}">Checkout</router-link>
         </div>
       </div>
     </div>
@@ -67,6 +65,7 @@ $base-grey: rgba(75, 75, 75, 0.9);
 }
 
 .cart__info__confirm-order {
+  display: block;
   text-align: center;
   font-size: 26px;
   margin-top: 10px;
@@ -74,11 +73,8 @@ $base-grey: rgba(75, 75, 75, 0.9);
   padding: 10px;
   background: $base-background-white;
   border-radius: 25px;
-
-  a {
-    text-decoration: none;
-    color: white;
-  }
+  text-decoration: none;
+  color: white;
 }
 
 .cart__promo-input {

@@ -1,6 +1,6 @@
 <template>
   <svg id="heartSymbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
-       @click="changeColor; this.isAdded=!this.isAdded">
+       @click="this.isAdded=!this.isAdded">
     <g>
       <path :class="{not_favorite: !this.isAdded, favorite: this.isAdded}" stroke-width="5px"
             d="M24.85,10.126c2.018-4.783,6.628-8.125,11.99-8.125c7.223,0,12.425,6.179,13.079,13.543
@@ -21,17 +21,6 @@ export default {
       isAdded: false
     }
   },
-  methods: {
-    changeColor: function () {
-      if (this.currentFillColor === "red") {
-        this.currentFillColor = "none";
-        this.currentStrokeColor = "grey";
-      } else {
-        this.currentFillColor = "red"
-        this.currentStrokeColor = "red";
-      }
-    }
-  }
 }
 </script>
 

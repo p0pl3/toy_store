@@ -5,11 +5,13 @@
       <div class="product-item__info">
         <h3>Product title</h3>
       </div>
-      <div class="product-item__count">
-        <img src="@/assets/remove.svg" style="width: 20px; height: 20px; margin-right: 25px;">
-        <input type="number" value="1" style="width: 40px; border: none; font-size: 20px;">
-        <img src="@/assets/add.svg" style="width: 20px; height: 20px">
+
+      <div class="product__counter">
+        <span @click="this.reduceCounter">&#8211;</span>
+        <span>{{ this.product_count }} </span>
+        <span @click="this.product_count+=1">+</span>
       </div>
+
       <div class="product-item__price">
         <h3>100$</h3>
       </div>
@@ -22,12 +24,23 @@
 
 <script>
 export default {
-  name: "CartProductItem"
+  name: "CartProductItem",
+  data() {
+    return {
+      product_count: 0
+    }
+  },
+  methods: {
+    reduceCounter() {
+      if (this.product_count > 0) {
+        this.product_count -= 1;
+      }
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-
 .product-item__description h3 {
   margin: 0;
 }
@@ -47,10 +60,6 @@ export default {
   height: 20px;
 }
 
-.product-item__count {
-  display: flex;
-}
-
 .product-item__description {
   display: flex;
   flex-wrap: wrap;
@@ -58,5 +67,20 @@ export default {
   align-items: flex-start;
   width: 100%;
   margin-left: 20px;
+}
+
+.product__counter {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  border-radius: 10px;
+  width: 80px;
+}
+
+.product__counter span {
+  padding: 5px;
+  color: black;
+  font-weight: bold;
+  font-size:24px;
 }
 </style>
