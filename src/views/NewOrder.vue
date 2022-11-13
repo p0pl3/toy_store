@@ -10,17 +10,17 @@
         <div class="basket__subtotal">
           <div class="basket__subtotal-item">
             <div class="basket__subtotal-title">Сумма по товарам</div>
-            <h6 class="basket__subtotal-price">1000$</h6>
+            <h6 class="basket__subtotal-price">1000₽</h6>
           </div>
           <div class="basket__subtotal-item">
             <div class="basket__subtotal-title">Стоимость доставки</div>
-            <h6 class="basket__subtotal-price">300$</h6>
+            <h6 class="basket__subtotal-price">300₽</h6>
           </div>
 
         </div>
         <div class="basket__total">
           <div class="basket__total-title">Итого:</div>
-          <h6 class="basket__total-price">1300$</h6>
+          <h6 class="basket__total-price">1300₽</h6>
         </div>
       </div>
       <div class="order">
@@ -64,7 +64,7 @@
                 <h4>Самовывоз</h4>
                 <h5>Доставка на пункт выдачи</h5>
               </div>
-              <h6>0$</h6>
+              <h6>0₽</h6>
             </label>
             <label class="method" for="method_delivery">
               <div class="method-input">
@@ -75,7 +75,7 @@
                 <h4>Курьером</h4>
                 <h5>Доставка на дом курьером</h5>
               </div>
-              <h6>300$</h6>
+              <h6>300₽</h6>
             </label>
           </div>
           <div class="payment__methods">

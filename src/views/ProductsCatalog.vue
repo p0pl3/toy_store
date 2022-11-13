@@ -4,8 +4,8 @@
     <div class="container">
       <div class="category_breadcrumb">
         <ul class="breadcrumb">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Pictures</a></li>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Каталог</a></li>
         </ul>
       </div>
     </div>
@@ -13,70 +13,70 @@
   <div class="">
     <div class="container">
       <div class="products-catalog__title">
-        <h2>Clothes</h2>
+        <h2>Рюкзаки</h2>
         <select name="sort_by_field" class="sort_product_select">
-          <option value="price">Price</option>
-          <option value="rating">Rating</option>
-          <option value="count">Count</option>
-          <option value="popular">Popular</option>
+          <option value="price">Цена</option>
+          <option value="rating">Рейтинг</option>
+          <option value="count">Количество</option>
+          <option value="popular">Популярность</option>
         </select>
       </div>
       <div class="products__article">
         <div class="products-catalog__filter">
           <div class="filter__category">
-            <h4 style="margin-top: 0px;">Category</h4>
+            <h4 style="margin-top: 0px;">Категории</h4>
             <ul>
-              <li><a href="#">Clothes</a></li>
-              <li><a href="#">Glass</a></li>
-              <li><a href="#">Toy</a></li>
-              <li><a href="#">Food</a></li>
-              <li><a href="#">Game</a></li>
+              <li><a href="#">Одежда</a></li>
+              <li><a href="#">Обувь</a></li>
+              <li><a href="#">Игрушки</a></li>
+              <li><a href="#">Питание</a></li>
+              <li><a href="#">Книги</a></li>
             </ul>
           </div>
           <div class="filter__price-range" style="border-top: 1px solid grey;">
-            <h4>Price</h4>
+            <h4>Цена</h4>
             <div class="price-range">
               <div class="filter__price-from">
-                <p class="filter__price-label">From</p>
+                <p class="filter__price-label">от</p>
                 <input class="filter__price-left" type="number">
               </div>
               <div class="filter__price-from">
-                <p class="filter__price-label">To</p>
+                <p class="filter__price-label">до</p>
                 <input class="filter__price-right" type="number">
               </div>
             </div>
           </div>
           <div class="filter__delivery" style="border-top: 1px solid grey;">
-            <h4>Delivery period</h4>
+            <h4>Период доставки</h4>
             <ul>
               <li>
                 <input type="radio" id="deliveryChoice1" name="delivery" value="email">
-                <label for="deliveryChoice1">1 day</label>
+                <label for="deliveryChoice1">1 день</label>
               </li>
               <li>
                 <input type="radio" id="deliveryChoice2" name="delivery" value="phone">
-                <label for="deliveryChoice2">2 day</label>
+                <label for="deliveryChoice2">2 день</label>
               </li>
               <li>
                 <input type="radio" id="deliveryChoice3" name="delivery" value="mail">
-                <label for="deliveryChoice3">up to 3 days</label>
+                <label for="deliveryChoice3">до 3 дней</label>
               </li>
             </ul>
           </div>
           <div class="filter__sale" style="border-top: 1px solid grey;">
-            <h4>Sale</h4>
+            <h4>Скидка</h4>
             <ul>
               <li>
                 <input type="radio" id="saleChoice1" name="contact" value="email">
-                <label for="saleChoice1">from 10% and up</label>
+                <label for="saleChoice1">скидка 10%</label>
               </li>
               <li>
                 <input type="radio" id="saleChoice2" name="contact" value="phone">
-                <label for="saleChoice2">from 30% and up</label>
+                <label for="saleChoice2">скидка 30%</label>
               </li>
               <li>
                 <input type="radio" id="saleChoice3" name="contact" value="mail">
-                <label for="saleChoice3">from 50% and up</label>
+                <label for="saleChoice3">скидка 50%</label>
               </li>
             </ul>
           </div>
@@ -219,7 +219,6 @@ input[type=radio] {
 ul.breadcrumb {
   padding: 0px 16px;
   list-style: none;
-  background-color: #eee;
 }
 
 ul.breadcrumb li {

@@ -2,9 +2,9 @@
   <div class="basket__item">
     <img class="basket__item-image" src="@/assets/product_1.jpeg">
     <div class="basket__item-description">
-      <span>Lorem Ipsum Lorem Ips</span>
+      <span>Рюкзак</span>
     </div>
-    <div class="basket__item-price">1000$</div>
+    <div class="basket__item-price">1000 ₽</div>
   </div>
 </template>
 

@@ -2,7 +2,7 @@
   <div class="product__slider__horizontal">
     <div class="container">
       <div class="product__slider-title">
-        <h4>Child bags</h4>
+        <h4>Детские рюкзаки</h4>
         <div class="product__slider-control">
           <a @click="previousProductHorizontalSlider">
             <img src="@/assets/arrow_back.svg" style="width: 20px; height: 20px">

@@ -7,12 +7,12 @@
     </div>
     <div class="product__description">
       <router-link :to="{name: 'ProductView'}" class="product__title">
-        <h3>Lorem Ipsum Lorem Ips</h3>
+        <h3>Рюкзак</h3>
       </router-link>
       <div class="product__price">
         <div v-if="this.product_count===0" class="prices">
-          <h4 class="new__price">100$</h4>
-          <h4 class="old__price">123$</h4>
+          <h4 class="new__price">100₽</h4>
+          <h4 class="old__price">123₽</h4>
         </div>
         <img v-if="this.product_count===0" class="cart__image" src="@/assets/cart-black.svg"
              @click="this.product_count+=1">

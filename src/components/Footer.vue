@@ -60,7 +60,7 @@
         </div>
         <div class="footer__contact">
           <div class="footer__social">
-            <h4>We in social</h4>
+            <h4>Контакты</h4>
             <div class="footer__social-ico">
               <img src="@/assets/vk.svg">
               <img src="@/assets/tg.svg">

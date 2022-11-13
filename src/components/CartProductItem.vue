@@ -3,7 +3,7 @@
     <img src="@/assets/product_item_1.jpeg" style="width: 100px;">
     <div class="product-item__description">
       <div class="product-item__info">
-        <h3>Product title</h3>
+        <h3>Ботинки детские</h3>
       </div>
 
       <div class="product__counter">
@@ -13,7 +13,7 @@
       </div>
 
       <div class="product-item__price">
-        <h3>100$</h3>
+        <h3>100₽</h3>
       </div>
       <div class="product-item__action">
         <img src="@/assets/delete.svg" style="width: 30px; height: 30px">

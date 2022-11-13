@@ -2,7 +2,7 @@
   <div class="banner__slider__horizontal">
     <div class="container">
       <div class="banner__slider-title">
-        <h4>Novelty</h4>
+        <h4>Новости</h4>
         <div class="banner__slider-control">
           <a @click="previousProductHorizontalSlider">
             <img src="@/assets/arrow_back.svg" style="width: 20px; height: 20px">
@@ -15,7 +15,7 @@
       <div class="banner__list" ref="ProductListHorizontalSlider">
         <div class="banner__list-item" v-for="i in (1, 2, 3,4, 5, 6,7,8,9,10)" :key="{i}">
           <BannerItem/>
-          <h4>Дестка одежда</h4>
+          <h4>Игрушки для детей</h4>
         </div>
       </div>
     </div>

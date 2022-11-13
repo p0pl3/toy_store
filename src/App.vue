@@ -28,7 +28,7 @@ $base-grey: rgba(75, 75, 75, 0.9);
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #ECEFF1;
+  background-color: #f5f5f5;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
 }

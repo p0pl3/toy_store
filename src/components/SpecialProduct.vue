@@ -2,7 +2,7 @@
   <div class="special__product">
     <div class="container">
       <div class="special__product-title">
-        <h4>Shoes</h4>
+        <h4>Обувь</h4>
         <div class="special__product__slider-control">
           <a @click="previousProductHorizontalSlider">
             <img src="@/assets/arrow_back.svg" style="width: 20px; height: 20px">

@@ -7,8 +7,8 @@
         </div>
         <div class="product__info">
           <div class="product__rating"></div>
-          <h1 class="product__title">Lorem Ipsum Lorem Ips</h1>
-          <h2 class="product__price">300$</h2>
+          <h1 class="product__title">Рюкзак</h1>
+          <h2 class="product__price">300 ₽</h2>
           <div class="product__controls">
             <button v-if="this.product_count===0" class="buy__button" @click="this.product_count+=1">
               <h>В корзину</h>
@@ -51,11 +51,11 @@
           <div class="product__description">
             <h3>Описание</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
+              Удобная и практичная  сумка-портфель изготовлена из натуральной кожи. Снабжена ручкой. В комплекте регулируемый плечевой ремень.
+
+              Состоит из двух отделений. В одном из которых есть отсек для ноутбука - он надежно закрывается хлястиком на липучку. Во втором - скрытый карман для документов и два места для мелких принадлежностей. Снаружи расположено три больших кармана на молниях.
+
+              Лицевая сторона украшена конгревом логотипа. Внутренняя декорирована кожаной нашивкой с тиснением логотипа.
             </p>
           </div>
           <div class="product__reviews">

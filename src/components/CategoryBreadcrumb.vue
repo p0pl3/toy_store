@@ -3,8 +3,8 @@
     <div class="container">
       <div class="category_breadcrumb">
         <ul class="breadcrumb">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Pictures</a></li>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Корзина</a></li>
         </ul>
       </div>
     </div>
@@ -22,7 +22,6 @@ ul.breadcrumb {
   padding: 0px 16px;
   list-style: none;
   margin: 0;
-  background-color: #eee;
 }
 
 ul.breadcrumb li {
