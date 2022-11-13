@@ -17,7 +17,7 @@ $base-grey: rgba(75, 75, 75, 0.9);
 
 .banner__image {
   border-radius: 15px;
-  height: 750px;
+  height: 705px;
   width: 100%;
   object-fit: cover;
 }
